@@ -27,7 +27,17 @@ $(document).ready(function() {
       $("body").width() * Math.random(),
       Math.random() * 1000
     );
+    window.dancers.push(dancer);
     $('body').append(dancer.$node);
   });
 });
 
+$('.lineUp').on('click', function(event) {
+  $.each(window.dancers, function(index) {
+    if(index % 2 === 0) {
+      window.dancers[index].$node.css('left', '20%');
+    } else {
+      window.dancers[index].$node.css('left', '80%');
+    }
+  })
+});
