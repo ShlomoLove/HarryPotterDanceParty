@@ -1,6 +1,7 @@
 var MakeHermoineDancer = function(top, left, timeBetweenSteps) {
     MakeDancer.call(this, top, left, timeBetweenSteps);
     this.$node.addClass('hermoineDancer');
+    this.$node.prepend('<img class=hermoineDancer src="Hermoine3.png" />');
     //var blinkyDancer = new MakeDancer(top, left, timeBetweenSteps);
   
     // we plan to overwrite the step function below, but we still want the superclass step behavior to work,

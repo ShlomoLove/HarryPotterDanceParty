@@ -29,15 +29,26 @@ $(document).ready(function() {
     );
     window.dancers.push(dancer);
     $('body').append(dancer.$node);
+
+    $('.harryDancer').on('click', function(event) {
+      //console.log('hello');
+      $(event.target).animate({'left': '90%'}, 'fast');
+    })
   });
+
+  $('.lineUp').on('click', function(event) {
+    $.each(window.dancers, function(index) {
+      if(index % 2 === 0) {
+        window.dancers[index].$node.css('left', '20%');
+      } else {
+        window.dancers[index].$node.css('left', '80%');
+      }
+    })
+  });
+  
+ 
+  
+  //$('.')
 });
 
-$('.lineUp').on('click', function(event) {
-  $.each(window.dancers, function(index) {
-    if(index % 2 === 0) {
-      window.dancers[index].$node.css('left', '20%');
-    } else {
-      window.dancers[index].$node.css('left', '80%');
-    }
-  })
-});
+

@@ -1,44 +1,95 @@
 body, html{
   height:100%;
+  background: url('Hogwarts-Background.jpg');
+  background-size: cover;
 }
 body{
   margin: 0px;
   background-color:#444;
-  font-size: 18px;
+  font-size: 16px;
+  font-family: sans-serif;
 }
 body, a:link, a:visited, a:active{
-  color: lightblue;
+  color: #eebebb;
+  text-decoration: none;
 }
-.title, .addDancerButton{
+a:hover{
+  border: 1px solid  #eebebb;
+  border-radius: 5px;
+}
+.addDancerButton, .lineUp{
   padding:5px 12px;
   float:right;
+  /* border: 1px solid #1b2137; */
+  /* background-color: #1b2137; */
+}
+.title, .HPlogo{
+  padding:5px 12px;
+  float: left;
+  font-size: 24px;
+}
+
+.HPlogo{
+  color: #eebebb;
+  width: auto;
+  height: 30px;
+}
+
+.addDancerButton, .lineUp{
+  background-color: #1b2137; 
+  margin: 5px;
+  border-radius: 5px;
 }
 .topbar{
   height:32px;
-  background-color: #555;
+  /* background-color: #555; */
 }
 .title{
-  background-color: #777;
+  
 }
-.dancer{
+/* .dancer{
   border:10px solid red;
   border-radius:100%;
   position:absolute;
-}
+} */
 
 .harryDancer{
-  border:10px solid dodgerblue;
-  border-radius:100%;
-  position:absolute;
+  width: auto;
+  height: 150px;
+  position: absolute;
 }
 
 .hermoineDancer {
-  border: 20px solid orange; 
-  border-radius: 100%;
+  width: auto;
+  height: 150px;
   position: absolute;
 }
 
 .snapeDancer {
-  border: 15px solid purple; 
-  position: absolute; 
+  width: auto;
+  height: 150px;
+  position: absolute;
+}
+
+.dumbledoreDancer {
+  width: auto;
+  height: 150px;
+  position: absolute;
+}
+
+.voldemortDancer {
+  width: auto;
+  height: 150px;
+  position: absolute;
+}
+
+.ronDancer {
+  width: auto;
+  height: 150px;
+  position: absolute;
+}
+
+.voldemortDancer:hover {
+  opacity:0; 
+  filter:alpha(opacity=0);
 }
