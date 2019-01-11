@@ -23,22 +23,48 @@ $(document).ready(function() {
     // make a dancer with a random position
 
     var dancer = new dancerMakerFunction(
-      $("body").height() * Math.random(),
-      $("body").width() * Math.random(),
+      $(".arena").height() * Math.random(),
+      $(".arena").width() * Math.random(),
       Math.random() * 1000
     );
     window.dancers.push(dancer);
-    $('body').append(dancer.$node);
+    $('.arena').append(dancer.$node);
 
     $('.harryDancer').on('click', function(event) {
-      //console.log('hello');
-      $(event.target).animate({'left': '90%'}, 'fast');
+      let height = Math.random() * 85;
+      let width = Math.random() * 85;
+      $(event.currentTarget).animate({'left': width + '%', 'top': height + '%'})
+    });
+
+    $('.dumbledoreDancer').on('click', function(event) {
+      if($(event.currentTarget).attr('src') === 'Dumbledore2.png') {
+        $(event.currentTarget).removeAttr('src');
+        $(event.currentTarget).attr('src', 'phoenix.png');  
+      } else if ($(event.currentTarget).attr('src') === 'phoenix.png') {
+        $(event.currentTarget).removeAttr('src');
+        $(event.currentTarget).attr('src', 'Dumbledore2.png');
+      }
+    });
+
+    $('.ronDancer').on('click', function(event) {
+      $('.hermoineDancer').css({'transform': 'rotate(45deg)'});
+    });
+
+    $('.hermoineDancer').on('click', function(event) {
+      $(event.currentTarget).css({'transform': 'rotate(0deg)'});
     })
-  });
+
+    $('.snapeDancer').on('click', function(event) {
+      $(event.currentTarget).animate({'top': '-=20'});
+    });
+
+  })
+
+ 
 
   $('.lineUp').on('click', function(event) {
     $.each(window.dancers, function(index) {
-      if(index % 2 === 0) {
+      if(window.dancers[index].$node.hasClass('voldemortDancer')) {
         window.dancers[index].$node.css('left', '20%');
       } else {
         window.dancers[index].$node.css('left', '80%');
@@ -46,9 +72,14 @@ $(document).ready(function() {
     })
   });
   
- 
-  
-  //$('.')
+  $('.shuffle').on('click', function(event) {
+    $.each(window.dancers, function(index) {
+      let height = $('.arena').height() * Math.random();
+      let width = $('.arena').width() * Math.random();
+      window.dancers[index].$node.css('top', height);
+      window.dancers[index].$node.css('left', width);
+    })
+  })
 });
 
 

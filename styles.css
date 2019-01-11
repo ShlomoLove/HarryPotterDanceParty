@@ -9,37 +9,59 @@ body{
   font-size: 16px;
   font-family: sans-serif;
 }
+.arena{
+  margin: 125px 50px 50px 50px;
+  height: 600px;
+  width: 1000px;
+  /* width: auto; */
+}
+
 body, a:link, a:visited, a:active{
-  color: #eebebb;
+  
   text-decoration: none;
 }
-a:hover{
+.addDancerButton:hover{
   border: 1px solid  #eebebb;
   border-radius: 5px;
 }
-.addDancerButton, .lineUp{
+.lineUp:hover, .shuffle:hover {
+  border: 1px solid  #1b2137;
+  border-radius: 5px;
+}
+.addDancerButton, .lineUp, .shuffle{
   padding:5px 12px;
   float:right;
-  /* border: 1px solid #1b2137; */
-  /* background-color: #1b2137; */
+  background-color: #1b2137; 
+  color: #eebebb;
+  margin: 5px;
+  border-radius: 5px;
+
+}
+.lineUp, .shuffle{
+  color: #1b2137;
+  background-color: #eebebb;
 }
 .title, .HPlogo{
-  padding:5px 12px;
   float: left;
-  font-size: 24px;
+  font-size: 36px;
+  font-family: 'Palatino Linotype';
+  font-weight: bold;
+  color: black;
+}
+
+.title {
+  padding: 10px 5px;
 }
 
 .HPlogo{
-  color: #eebebb;
   width: auto;
-  height: 30px;
+  height: 50px;
+  padding:10px;
 }
 
-.addDancerButton, .lineUp{
-  background-color: #1b2137; 
-  margin: 5px;
-  border-radius: 5px;
-}
+
+
+
 .topbar{
   height:32px;
   /* background-color: #555; */
@@ -89,7 +111,12 @@ a:hover{
   position: absolute;
 }
 
+.ronDancer:hover {
+  width: auto;
+  height: 300px;
+}
+
 .voldemortDancer:hover {
-  opacity:0; 
+  opacity:0;  
   filter:alpha(opacity=0);
 }
