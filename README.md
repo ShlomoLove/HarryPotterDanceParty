@@ -1,2 +1,2 @@
 # subclass-dance-party
-This is a project I completed as a student at [hackreactor](http://hackreactor.com). This project was worked on with a pair.
+This is a project I completed as a student at [hackreactor](http://hackreactor.com). In this project we showed the inheritance of classes by recreating an imaginary fight between good and evil. This project was worked on with a pair.
